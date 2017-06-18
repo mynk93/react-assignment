@@ -1,0 +1,72 @@
+.react-bs-table {
+    margin-bottom: 37px
+}
+
+.react-bs-table .table-header {
+    height: 37px;
+    border-bottom: 1px solid #ddd
+}
+
+.react-bs-table .table-header>table {
+    table-layout: fixed;
+    border-right-style: hidden;
+    border-top-style: hidden
+}
+
+.react-bs-table .table-header>table>thead>tr {
+    border-bottom-style: hidden
+}
+
+.react-bs-table .table-striped>tbody>tr:nth-child(odd)>td,
+.react-bs-table .table-striped>tbody>tr:nth-child(odd)>th {
+    background-color: #FFF
+}
+
+.react-bs-table .table-hover>tbody>tr:hover,
+.react-bs-table .table-hover>tbody>tr:hover>td,
+.react-bs-table .table-striped .table-hover>tbody>tr:hover,
+.table-hover>tbody>tr:hover>th {
+    background-color: #fff
+}
+
+.react-bs-table .table-bordered {
+    border: none!important
+}
+
+.react-bs-table .table-bordered>tbody>tr>td,
+.react-bs-table .table-bordered>tfoot>tr>td {
+    border: none;
+    border-top: 1px solid #ddd!important
+}
+
+.react-bs-table .table>thead:first-child>tr:first-child>th {
+    border: none
+}
+
+/*.react-bs-table .table-header>table>thead>tr>th .table-header-column {
+    line-height: 25px;
+    color: #2e6b99;
+    text-decoration: none
+}
+
+.react-bs-table .table-header>table>thead>tr>th .table-header-column:hover {
+    line-height: 25px;
+    color: #1c425e;
+    text-decoration: underline
+}
+*/
+/*.react-bs-table .table-header>table>thead>tr>.sort-column {
+    cursor: pointer
+}
+*/
+.react-bs-table .table-container {
+    overflow-x: auto;
+    overflow-y: auto;
+    height: 100%
+}
+
+.react-bs-table .table-container>table {
+    margin-top: -18px;
+    table-layout: fixed;
+    margin-bottom: 0
+}
