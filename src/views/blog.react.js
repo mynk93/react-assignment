@@ -1,8 +1,4 @@
 import React from 'react';
-import { connect } from 'react-redux';
-import { bindActionCreators } from 'redux';
-import * as Actions from '../actions/Actions';
-import Paper from 'material-ui/Paper';
 import articleJSON from '../file';
 import Comment from './Comment.react.js';
 import Author from './Author.react.js';

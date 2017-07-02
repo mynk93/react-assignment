@@ -1,5 +1,5 @@
+import React from 'react';
 import { Route }   from 'react-router';
-import React       from 'react';
 import CoreLayout  from 'layouts/coreLayout';
 import Home    from 'views/homeView.react';
 import Blog    from 'views/blog.react';

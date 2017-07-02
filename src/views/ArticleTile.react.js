@@ -1,6 +1,6 @@
 import React from 'react';
-import {Card, CardActions, CardHeader, CardMedia, CardTitle, CardText} from 'material-ui/Card';
-
+import {Card, CardHeader, CardMedia, CardTitle, CardText} from 'material-ui/Card';
+import LazyLoad from 'react-lazy-load';
 
 export default class ArticleTile extends React.Component {
 
@@ -13,7 +13,9 @@ export default class ArticleTile extends React.Component {
           avatar={(this.props.tile.avatar && this.props.tile.gender)? "https://randomuser.me/api/portraits/thumb/" + this.props.tile.gender + '/' + this.props.tile.avatar + ".jpg" : "https://randomuser.me/api/portraits/thumb/lego/6.jpg"}
         />
         <CardMedia>
-          <img src={"https://unsplash.it/500/300/?image=" + (this.props.tile.index +  17)} alt="" />
+          <LazyLoad height={300} width={500}>
+            <img src={"https://unsplash.it/500/300/?image=" + (this.props.tile.index +  17)} alt="" />
+          </LazyLoad>
         </CardMedia>
         <CardTitle title={this.props.tile.title} />
         <CardText style={{height: '100px', overflow:'hidden'}}>

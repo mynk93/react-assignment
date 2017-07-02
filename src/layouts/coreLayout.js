@@ -1,8 +1,5 @@
 import React from 'react';
-import { connect } from 'react-redux';
-import { bindActionCreators } from 'redux';
 import Header from 'containers/header';
-import * as Actions from '../actions/Actions';
 import injectTapEventPlugin from 'react-tap-event-plugin';
 
 injectTapEventPlugin();

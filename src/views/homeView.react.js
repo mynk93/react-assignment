@@ -46,7 +46,7 @@ export default class Home extends React.Component {
   }
 
   handleScroll = () => {
-    if($(window).scrollTop() + $(window).height() > $(document).height() - 100) {
+    if($(window).scrollTop() + $(window).height() > $(document).height() - 300) {
       $(window).unbind('scroll');
       this.loadTiles();
     }
@@ -95,9 +95,9 @@ export default class Home extends React.Component {
 }
 
 function mapStateToProps(state) {
-  const { oratio } = state;
+  const { example } = state;
   return {
-    oratio
+    example
   };
 }
 

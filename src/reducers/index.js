@@ -1,8 +1,6 @@
 import { combineReducers } from 'redux';
-import oratio from './oratio';
-import auth from './auth';
+import example from './example';
 
 export default combineReducers({
-  oratio,
-  auth,
+	example
 });

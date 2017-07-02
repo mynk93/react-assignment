@@ -22,34 +22,6 @@ body {
   width: 40px;
 }
 
-.header .logoHolder {
-  float: left;
-  width: 30%;
-  margin-top: -4px;
-}
-
-.header .dpHolder {
-  float: right;
-  text-align: right;
-  cursor: pointer;
-}
-
-.header .dpHolder img {
-  border-radius: 100%;
-}
-
-.header .dpHolder {
-  float: right;
-  text-align: right;
-  height: 36px;
-  width: 36px;
-  overflow: hidden;
-}
-
-.header .dpHolder img {
- max-width: 100%;
-}
-
 .header .logo {
   font-size: 36px;
   color: #fff;
@@ -68,15 +40,6 @@ body {
 .header .logoText {
   position: relative;
   top: 5px;
-}
-
-.header .logoText:before {
-  border-right: 1px solid #fff;
-  height: 30px;
-  position: absolute;
-  top: 5px;
-  left: -7px;
-  content: "";
 }
 
 .headerRight {
@@ -111,24 +74,9 @@ body {
   top: 5px;
 }
 
-.logoText:before {
-  border-right: 1px solid #00C3FF;
-  height: 30px;
-  position: absolute;
-  top: 5px;
-  left: -7px;
-  content: "";
-}
-
-
 .view-container {
     margin-left: 96px;
     margin-top: 60px;
-}
-
-hr {
-    border-top: 1px solid #8c8b8b;
-    border-bottom: 1px solid #fff;
 }
 
 .holder {
