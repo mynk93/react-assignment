@@ -1,8 +1,2 @@
 node_modules/
-public/app.*.js
-public/app.*.js.map
-public/vendor.*.js
-public/vendor.*.js.map
-/views
-dist
 *.log
