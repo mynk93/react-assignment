@@ -64,15 +64,16 @@ export default class Home extends React.Component {
 
   loadTiles = () => {
     let tilesData = this.state.tilesData;
-    let test = articleJSON;
     this.pageIndex += 1;
-    let newArray = tilesData.concat(test.tiles.slice(this.pageIndex * this.pageNumber, (this.pageIndex * this.pageNumber) + this.pageNumber))
-    this.setState({
-      tilesData: newArray
-    }, function(){
-      $(window).bind('scroll', this.handleScroll);
-    });
-    
+    let startCount = this.pageIndex * this.pageNumber;
+    if(startCount < articleJSON.tiles.length){
+      let newArray = tilesData.concat(articleJSON.tiles.slice(startCount, startCount + this.pageNumber))
+      this.setState({
+        tilesData: newArray
+      }, function(){
+        $(window).bind('scroll', this.handleScroll);
+      });
+    }
   }
 
   onArticleSelect = (articleId) => {

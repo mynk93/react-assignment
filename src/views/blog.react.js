@@ -18,7 +18,6 @@ export default class Blog extends React.Component {
 
   componentWillMount() {
     window.scrollTo(0,0);
-    let comments = articleJSON.tiles[this.articleId].comments;
     this.setState({
       articleData: articleJSON.tiles[this.articleId],
     })
@@ -38,10 +37,10 @@ export default class Blog extends React.Component {
 
   loadComments = () => {
     let comments = this.state.articleData.comments;
-    let commentArray = [];
+    let commentArray = this.state.comments;
     let commentStartCount = this.commentIndex * this.commentGroupCount;
     if(commentStartCount < comments.length){
-      comments.slice(this.commentStartCount, this.commentGroupCount).map((comment) => {
+      comments.slice(this.commentStartCount, commentStartCount + this.commentGroupCount).map((comment) => {
         commentArray.push(<Comment key={comment.id} comment={comment}></Comment>)
       })
       this.setState({
