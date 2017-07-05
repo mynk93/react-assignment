@@ -67,7 +67,7 @@ export default class Blog extends React.Component {
 
         <div className="row" id="jumbo" style={{paddingTop: 36,  marginLeft: '-110.5px', paddingBottom: 72}}>
           <div className="col-md-12">
-            <img src={"https://unsplash.it/" + $(window).width() + "/800/?image=" + (this.state.articleData.index +  17)} alt="" />
+            <img src={"https://unsplash.it/" + $(window).width() + "/800/?image=" + (this.state.articleData.index +  27)} alt="" />
           </div>
         </div>
 
