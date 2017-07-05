@@ -12,31 +12,48 @@ export default class Blog extends React.Component {
       comments: []
     }
     this.articleId = this.props.location.pathname.substr(this.props.location.pathname.lastIndexOf('/') + 1);
+    this.commentGroupCount = 5;
+    this.commentIndex = 0;
   }
 
   componentWillMount() {
     window.scrollTo(0,0);
+    let comments = articleJSON.tiles[this.articleId].comments;
     this.setState({
-      articleData: articleJSON.tiles[this.articleId]
+      articleData: articleJSON.tiles[this.articleId],
     })
     $(window).bind('scroll', this.handleScroll);
   }
 
+  componentWillUnmount(){
+    $(window).unbind('scroll');
+  }
+
   handleScroll = () => {
-    if($(window).scrollTop() + $(window).height() > $(document).height() - 50) {
+    if($(window).scrollTop() + $(window).height() > $(document).height() - 150) {
       $(window).unbind('scroll');
       this.loadComments();
     }
   }
 
   loadComments = () => {
+    let comments = this.state.articleData.comments;
     let commentArray = [];
-    this.state.articleData.comments.map((comment) => (
-      commentArray.push(<Comment key={comment.id} comment={comment}></Comment>)
-    ))
-    this.setState({
-      comments: commentArray
-    })
+    let commentStartCount = this.commentIndex * this.commentGroupCount;
+    if(commentStartCount < comments.length){
+      comments.slice(this.commentStartCount, this.commentGroupCount).map((comment) => {
+        commentArray.push(<Comment key={comment.id} comment={comment}></Comment>)
+      })
+      this.setState({
+        comments: commentArray
+      }, function(){
+        $(window).bind('scroll', this.handleScroll);
+        this.commentIndex += 1;
+      });
+    } else {
+      console.log("Reached end of comments");
+    }
+    
   }
 
   render () {

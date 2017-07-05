@@ -45,6 +45,10 @@ export default class Home extends React.Component {
     $(window).bind('scroll', this.handleScroll);
   }
 
+  componentWillUnmount(){
+    $(window).unbind('scroll');
+  }
+
   handleScroll = () => {
     if($(window).scrollTop() + $(window).height() > $(document).height() - 300) {
       $(window).unbind('scroll');

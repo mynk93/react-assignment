@@ -8,7 +8,6 @@ import * as types from 'constants';
   }
 */
 export function changeView(view) {
-  console.log("In Change View")
   return { 
     type: types.DUMMY,
     meta: {

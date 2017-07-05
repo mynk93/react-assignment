@@ -3,26 +3,33 @@
   "version": "1.0.0",
   "description": "Assignment",
   "main": "index.js",
+  "engines": {
+    "node": "6.10.0",
+    "npm": "3.10.10"
+  },
   "scripts": {
-    "start": "npm run dev",
+    "start": "node bin/server",
     "dev": "node --harmony bin/webpack-dev-server"
   },
   "author": "CronJ",
   "license": "ISC",
-   "dependencies": {
+  "dependencies": {
     "babel": "^5.8.23",
+    "consolidate": "^0.14.1",
     "es6-promise": "^4.0.5",
+    "express": "^4.15.3",
     "fs": "0.0.1-security",
     "history": "1.9.1",
     "immutable": "^3.8.1",
     "imutable": "0.0.1",
     "invariant": "^2.2.1",
     "material-ui": "^0.16.7",
+    "mustache": "^2.2.1",
+    "nodemon": "^1.11.0",
     "path": "^0.12.7",
     "react": "^15.3.2",
     "react-dom": "^15.3.2",
     "react-redux": "2.1.2",
-    "react-lazy-load": "^3.0.12",
     "react-router": "1.0.0-rc1",
     "react-tap-event-plugin": "^2.0.0",
     "redux": "3.0.0",
